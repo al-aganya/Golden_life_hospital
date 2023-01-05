@@ -1,0 +1,257 @@
+
+
+.bodyD {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-image:  linear-gradient(to right, #0b0745, #b09436);
+    background-repeat: no-repeat;
+}
+
+.guru{ 
+    font-family: "Trebuchet MS", Arial, Verdana;       
+    /* background: #e9e9e9 url('./images/mpesa.png') no-repeat; */
+    border-radius: 16px;
+    border: 1px solid #d9d9d9;
+    text-shadow: 1px 1px #fff;
+    
+}
+
+/* .main{
+	width: 55vw;
+	background: inherit;
+	margin: auto;
+	position: relative;
+	top: 8vh;
+	height: auto;
+	padding: 2vw;
+	padding-top: 5vw;
+	padding-bottom: 10vw;
+}  */
+
+.sec{
+	font-size: 1.5vw;
+	width: 100%; 
+	padding: 1.5vw;
+	cursor: pointer;
+	margin-top: 0.5vw;
+	background-color: inherit;
+	text-align: left;
+	color: linen;
+}
+.sec:hover{
+	width: 110%;
+	padding: 2vw;
+   animation-name: rotate;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: 1;
+}
+	
+
+
+.fa{
+        float: right;
+}
+.collapsable{
+	width: 100%;
+	background-color: pink;
+	padding: 2vw;
+	font-size: 1.2vw;
+	display: none;
+	color: #757575;
+	background-color: white;
+}
+.sec i{
+	font-size: 2vw;
+	color: #616161;
+}
+.lg {
+    font-size: 3rem;
+}
+
+
+input, textarea {
+    background-color: #F3E5F5;
+    border-radius: 50px !important;
+    padding: 12px 15px 12px 15px !important;
+    width: 100%;
+    box-sizing: border-box;
+    border: none !important;
+    border: 1px solid #F3E5F5 !important;
+    font-size: 16px !important;
+    color: #000 !important;
+    font-weight: 400;
+}
+
+input:focus, textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #D500F9 !important;
+    outline-width: 0;
+    font-weight: 400;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+
+.cards {
+    border-radius: 0;
+    border: none;
+}
+
+.card1D {
+    width: 50%;
+    padding: 40px 30px 10px 30px;
+}
+
+.card2D {
+    width: 50%;
+    background-image: linear-gradient(to right, #b09436, #0b0745);
+}
+
+.cardyy {
+    background-image: linear-gradient(to right, #ad9136, #e7e7f4);
+}
+
+
+#logo {
+    width: 70px;
+    height: 60px;
+}
+
+.heading {
+    margin-bottom: 60px !important;
+}
+
+::placeholder {
+    color: #000 !important;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #000 !important;
+}
+
+::-ms-input-placeholder {
+    color: #000 !important;
+}
+
+.form-control-label {
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.msg-info {
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-color {
+    border-radius: 50px;
+    color: #0b0745;    
+    /* background: linen url(/mpesa.png) no-repeat; */
+    background-size: contain;
+    padding: 15px;
+    cursor: pointer;
+    /* border: none !important; */
+    margin-top: 40px;
+}
+
+.btn-color:hover {
+    color: #0b0745;
+    /* background: burlywood url(/mpesa.png) no-repeat; */
+    background-size: contain;
+}
+
+.btn-white {
+    border-radius: 50px;
+    color: #D500F9;
+    background-color: #fff;
+    padding: 8px 40px;
+    cursor: pointer;
+    border: 2px solid #D500F9 !important;
+}
+
+.btn-white:hover {
+    color: #fff;
+    background-image:  linear-gradient(to right, #b09436, #0b0745);
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 50px !important;
+}
+
+.sm-text {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .card1D {
+        width: 100%;
+        padding: 40px 30px 10px 30px;
+    }
+
+    .card2D {
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important;
+    }
+
+    .card2D {
+        padding: 50px;
+    }
+
+    .right {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+}
+@media only screen and (max-width: 425px){
+	.main{
+		width: 90vw;
+	}
+	.sec{
+	    font-size: 4.5vw;
+	    width: 100%;
+	    padding: 4.5vw;
+		margin-top: 1.5vw;
+    }
+	.sec:hover{ 
+	    width: 110%;
+	    padding: 6vw; 
+	}
+	.collapsable{ 
+	    width: 100%;
+	    padding: 6vw;
+	    font-size: 3.6vw;
+	    display: none; 
+    }
+	.sec i{
+		font-size: 6vw;
+	}
+}
