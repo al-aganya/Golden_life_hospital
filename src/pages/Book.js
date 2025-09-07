@@ -7,12 +7,13 @@ import Moment from 'react-moment';
 import Header from '../components/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import './book.css'
 
 
 function Book(props) {
 
 
-    const { _id, name,author, description, date,location, time } = props.book;
+    const { _id, image, name, author, description, date, location, time } = props.book;
     const history = useNavigate();
 
 
@@ -22,21 +23,37 @@ function Book(props) {
         await axios
             .delete(`https://reactback.onrender.com/books/${_id}`)
             .then((res) => res.data)
+            .then((data) => console.log(data))
             .then(() => history("/book_s"))
             .then(() => history("/book_s"));
 
     };
     return (
         <>
-
-<div  className="card" style={{width: '450', backgroundColor: '#f4f4f4', borderRadius: '10px', padding: '20px', textAlign: "center",  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",  margin: 'auto'}}>
-    <img style={{width:'150px', borderRadius: '50%', marginBottom: "20px", margin: 'auto'}} src={process.env.PUBLIC_URL + '/images/lenai.jpg'} alt="presenter" />
-    <h2 style={{ color: '#333', fontSize: '20px', marginBottom: '10px'}}>{name}</h2>
-    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px'}}> Speaker: {author}</p>
-    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px'}}><FontAwesomeIcon icon={faMapMarkerAlt} style={{color: 'blue', marginRight: '5px'}}/>Location: Online</p>
-    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px'}}>Date and Time: June 15, 2023, 2:00 PM (GMT)</p>
-    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px'}}>Topic: Lorem ipsum dolor sit amet</p>
-  </div>
+            <Link to={`/books/${_id}`}>
+                <div className="card_reg" style={{ width: '450', backgroundColor: '#f4f4f4', borderRadius: '10px', padding: '20px', textAlign: "center", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", margin: 'auto' }}>
+                    <img style={{ width: '150px', borderRadius: '50%', marginBottom: "20px", margin: 'auto' }} src={image} alt="presenter" />
+                    <h2 style={{ color: '#333', fontSize: '20px', marginBottom: '10px' }}>Title: {name}</h2>
+                    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px' }}> Speaker: {author}</p>
+                    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px' }}><FontAwesomeIcon icon={faMapMarkerAlt} style={{ color: 'blue', marginRight: '5px' }} />Location: {location}</p>
+                    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px' }}>Date and Time: <Moment format='YYYY/MM/DD'>{date}</Moment></p>
+                    <p>{time}</p>
+                    <p style={{ color: '#777', fontSize: '14px', marginBottom: '5px' }}>Description: {description}</p>
+                    <ul>
+                    {user ? (
+                        <li>
+                            <Button color="error" onClick={deleteHandler} sx={{ mt: "auto" }}>
+                                Delete
+                            </Button>
+                        </li>
+                    ) : (
+                        <>
+                            
+                        </>
+                    )}
+                </ul>
+                </div>
+            </Link>
             {/* <section className="date">
                 <time>
                 <Button LinkComponent={Link} to={`/books/${_id}`} sx={{ mt: "auto" }} className="btn btn-black"><i className='fas fa-plus-circle'></i></Button>
